@@ -34,7 +34,7 @@ url：https://www.qcc.com/api/auth/qrcode-create
 
 （1）首先看一下请求的内容
 
-![1](..\image\1.png)
+![1](image/1.png)
 
 ​														图1
 
@@ -42,13 +42,13 @@ url：https://www.qcc.com/api/auth/qrcode-create
 
 （3）对于这种情况无法直接搜索参数的Key，因此先对其他的参数进行搜索，会发现其他参数几乎搜索不到相关内容，搜索“api/auth/qrcode-create”或请求体的关键字可以定位到下图位置：
 
-![image-20240726004709470](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240726004709470.png)
+![2](image/2.png)
 
 ​														图2
 
 （4）在上述.post()函数处打断点进行调试可获取参数加密的位置，我这里跳过这些步骤，直接定位到加密算法的位置：
 
-![image-20240727010739054](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240727010739054.png)
+![3](image/3.png)
 
 ​														图3
 
@@ -56,15 +56,15 @@ url：https://www.qcc.com/api/auth/qrcode-create
 
 （5）由上图可以看出来，Key和Value是用同一个方式进行加密的，以Key为例，继续跟进函数：
 
-![image-20240727011133213](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240727011133213.png)
+![4](image/4.png)
 
 ​														图4
 
-![image-20240727011232638](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240727011232638.png)
+![5](image/5.png)
 
 ​														 图5
 
-![image-20240727011314816](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240727011314816.png)
+![6](image/6.png)
 
 ​														  图6
 
