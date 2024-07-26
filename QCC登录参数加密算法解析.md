@@ -34,7 +34,7 @@ url：https://www.qcc.com/api/auth/qrcode-create
 
 （1）首先看一下请求的内容
 
-![image-20240726004038235](C:\Users\HZP\AppData\Roaming\Typora\typora-user-images\image-20240726004038235.png)
+![1](..\image\1.png)
 
 ​														图1
 
